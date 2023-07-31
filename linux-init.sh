@@ -25,3 +25,19 @@ snap install spotify
 
 #discord
 snap install discord
+
+#vlc
+snap install vlc
+
+#balena etcher
+curl -1sLf \
+   'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \
+   | sudo -E bash
+sudo apt update
+sudo apt install balena-etcher-electron
+
+#minecraft
+curl -O https://launcher.mojang.com/download/Minecraft.deb
+
+#steam
+snap install steam
