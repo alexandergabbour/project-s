@@ -1,0 +1,10 @@
+GUI
+    -tile based
+    -categories
+    -menu with settings
+    -taskbar shortcuts
+
+Code
+    -executes either bash or python scripts
+    -single file for each tile
+        --contains design of the tile itself as well as the scripts
