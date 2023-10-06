@@ -1,10 +1,11 @@
 GUI
     -tile based
+        --each tile references a design file
     -categories
     -menu with settings
     -taskbar shortcuts
 
 Code
     -executes either bash or python scripts
-    -single file for each tile
-        --contains design of the tile itself as well as the script
+    -single script file for each tile
+        --when the user clicks the tile, the app references a script file to execute
