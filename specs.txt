@@ -1,6 +1,6 @@
 GUI
     -tile based
-        --each tile references a design file
+        --each tile references a design file (could instead create seperate classes in the gui.py file?)
     -categories
     -menu with settings
     -taskbar shortcuts
