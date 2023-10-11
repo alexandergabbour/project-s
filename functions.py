@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+
+#throw whatever functions that the shortcut buttons need to reference down here. will need some organization in the future as this scales.
+
 def print_hello():
     print('hello')
 

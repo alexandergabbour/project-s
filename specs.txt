@@ -9,3 +9,7 @@ Code
     -executes either bash or python scripts
     -single script file for each tile
         --when the user clicks the tile, the app references a script file to execute
+
+Dependencies
+    -customtkinter
+    -Ubuntu font
