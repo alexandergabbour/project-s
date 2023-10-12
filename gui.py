@@ -1,4 +1,10 @@
-#!/usr/bin/python3CTkButton
+#!/usr/bin/python3
+
+#name ideas: Essence, ....
+#
+#
+#
+#
 
 from typing import Optional, Tuple, Union
 import customtkinter
@@ -20,11 +26,12 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         
-        self = customtkinter.CTk()
-        self.geometry('1200x1000')
-        self.title('Project-S') #name ideas: Essence
+        dflt_windowSize = str('1200x1000')
+
+        self.geometry(dflt_windowSize)
+        self.title('Project-S')
         self.grid_columnconfigure(0, weight=0) #weight set to 0 to collapse the column to the size of the frame
-        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(1, weight=1) #weight set to 1 to take up the remaining space
         self.grid_rowconfigure(0, weight=1)
 
         self.menu = Menu(self)
