@@ -22,7 +22,7 @@ class pyScripts():
 
 class bashScripts():
 
-    def script1():
+    def script1(): #test function: bash stuff from user would go in the triple quotes below #! /bin/bash
         hello = '''
         #! /bin/bash
         echo 'hello world'
