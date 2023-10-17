@@ -1,4 +1,21 @@
-#!/usr/bin/python3CTkButton
+#!/usr/bin/python3
+
+#name ideas: Essence, ....
+#
+#
+#
+# ________    ________      ________         ___      _______       ________      _________                   ________      
+#|\   __  \  |\   __  \    |\   __  \       |\  \    |\  ___ \     |\   ____\    |\___   ___\                |\   ____\     
+#\ \  \|\  \ \ \  \|\  \   \ \  \|\  \      \ \  \   \ \   __/|    \ \  \___|    \|___ \  \_|  ____________  \ \  \___|_    
+# \ \   ____\ \ \   _  _\   \ \  \\\  \   __ \ \  \   \ \  \_|/__   \ \  \            \ \  \  |\____________\ \ \_____  \   
+#  \ \  \___|  \ \  \\  \|   \ \  \\\  \ |\  \\_\  \   \ \  \_|\ \   \ \  \____        \ \  \ \|____________|  \|____|\  \  
+#   \ \__\      \ \__\\ _\    \ \_______\\ \________\   \ \_______\   \ \_______\       \ \__\                   ____\_\  \ 
+#    \|__|       \|__|\|__|    \|_______| \|________|    \|_______|    \|_______|        \|__|                  |\_________\
+#                                                                                                               \|_________|
+                                                                                                                           
+                                                                                                                           
+
+
 
 from typing import Optional, Tuple, Union
 import customtkinter
@@ -20,11 +37,12 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         
-        self = customtkinter.CTk()
-        self.geometry('1200x1000')
-        self.title('Project-S') #name ideas: Essence
+        dflt_windowSize = str('1200x1000')
+
+        self.geometry(dflt_windowSize)
+        self.title('Project-S')
         self.grid_columnconfigure(0, weight=0) #weight set to 0 to collapse the column to the size of the frame
-        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(1, weight=1) #weight set to 1 to take up the remaining space
         self.grid_rowconfigure(0, weight=1)
 
         self.menu = Menu(self)
@@ -38,7 +56,7 @@ class Menu(customtkinter.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
-        c_rad = int(15)
+        c_rad = int(3)
         b_size = int(200)
         b_colour = str('transparent')
 
@@ -71,7 +89,7 @@ class SC_cats(customtkinter.CTkFrame):
 #shortcuts to go into category 1
 class Cat1(customtkinter.CTkFrame):
     def __init__(self, master):
-        super().__init__(master, fg_color='transparent')
+        super().__init__(master)
 
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='String Functions')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
@@ -85,7 +103,7 @@ class Cat1(customtkinter.CTkFrame):
 #shortcuts to go into category 2
 class Cat2(customtkinter.CTkFrame):
     def __init__(self, master):
-        super().__init__(master, fg_color='transparent')
+        super().__init__(master)
 
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='Math Operations')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
