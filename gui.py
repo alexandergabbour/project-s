@@ -4,7 +4,18 @@
 #
 #
 #
-#
+# ________    ________      ________         ___      _______       ________      _________                   ________      
+#|\   __  \  |\   __  \    |\   __  \       |\  \    |\  ___ \     |\   ____\    |\___   ___\                |\   ____\     
+#\ \  \|\  \ \ \  \|\  \   \ \  \|\  \      \ \  \   \ \   __/|    \ \  \___|    \|___ \  \_|  ____________  \ \  \___|_    
+# \ \   ____\ \ \   _  _\   \ \  \\\  \   __ \ \  \   \ \  \_|/__   \ \  \            \ \  \  |\____________\ \ \_____  \   
+#  \ \  \___|  \ \  \\  \|   \ \  \\\  \ |\  \\_\  \   \ \  \_|\ \   \ \  \____        \ \  \ \|____________|  \|____|\  \  
+#   \ \__\      \ \__\\ _\    \ \_______\\ \________\   \ \_______\   \ \_______\       \ \__\                   ____\_\  \ 
+#    \|__|       \|__|\|__|    \|_______| \|________|    \|_______|    \|_______|        \|__|                  |\_________\
+#                                                                                                               \|_________|
+                                                                                                                           
+                                                                                                                           
+
+
 
 from typing import Optional, Tuple, Union
 import customtkinter
@@ -45,7 +56,7 @@ class Menu(customtkinter.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
-        c_rad = int(15)
+        c_rad = int(3)
         b_size = int(200)
         b_colour = str('transparent')
 
@@ -78,7 +89,7 @@ class SC_cats(customtkinter.CTkFrame):
 #shortcuts to go into category 1
 class Cat1(customtkinter.CTkFrame):
     def __init__(self, master):
-        super().__init__(master, fg_color='transparent')
+        super().__init__(master)
 
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='String Functions')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
@@ -92,7 +103,7 @@ class Cat1(customtkinter.CTkFrame):
 #shortcuts to go into category 2
 class Cat2(customtkinter.CTkFrame):
     def __init__(self, master):
-        super().__init__(master, fg_color='transparent')
+        super().__init__(master)
 
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='Math Operations')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
