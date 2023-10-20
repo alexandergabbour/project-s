@@ -20,7 +20,8 @@
 from typing import Optional, Tuple, Union
 import customtkinter
 
-from functions import *
+from functions import pyScripts
+from functions import bashScripts
 
 customtkinter.set_appearance_mode('system')
 customtkinter.set_default_color_theme('blue')
@@ -94,10 +95,10 @@ class Cat1(customtkinter.CTkFrame):
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='String Functions')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
 
-        self.sc1 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='Hello', command=print_hello)
+        self.sc1 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='Hello', command=bashScripts.script1)
         self.sc1.grid(row=1, column=0, padx=20, pady=20)
 
-        self.sc2 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='Goodbye', command=print_goodbye)
+        self.sc2 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='Goodbye', command=pyScripts.print_goodbye)
         self.sc2.grid(row=1, column=1, padx=20, pady=20)
 
 #shortcuts to go into category 2
@@ -108,10 +109,10 @@ class Cat2(customtkinter.CTkFrame):
         self.label = customtkinter.CTkLabel(self, font=(app_font, app_fontSize), text='Math Operations')
         self.label.grid(row=0, column=0, padx=(15, 0), pady=(20, 10), columnspan=2, sticky='w')
 
-        self.sc1 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='3+4', command=add)
+        self.sc1 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='3+4', command=pyScripts.add)
         self.sc1.grid(row=1, column=0, padx=20, pady=20)
 
-        self.sc2 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='6-2', command=subtract)
+        self.sc2 = customtkinter.CTkButton(self, font=(app_font, app_fontSize), height=sc_height, width=sc_width, text='6-2', command=pyScripts.subtract)
         self.sc2.grid(row=1, column=1, padx=20, pady=20)
 
 #run app
