@@ -15,7 +15,8 @@
                                                                                                                            
                                                                                                                            
 import customtkinter
-from functions import *
+from functions import pyScripts
+from functions import bashScripts
 from const import *
 
 customtkinter.set_appearance_mode('system')
