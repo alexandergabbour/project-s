@@ -1,3 +1,4 @@
 .gui/
+.psvenv/
 specs.txt
 __pycache__/
