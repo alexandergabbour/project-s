@@ -7,10 +7,6 @@ you will need to have the customtkinter library as well as the Ubuntu font insta
 
 *this will eventually be included in a requirements .txt file for quicker dependancy installation
 
-## known issues
-
-oh so much... see the issues tab for more detail.
-
 ## improvements in development
 
 - dynamic shortcut+function package creation
