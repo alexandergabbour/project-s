@@ -21,6 +21,9 @@ class config():
     app_font = 'Ubuntu'
     app_fontSize = 14
     dflt_windowSize = '600x500'
+    c_rad = 10
+    b_size = 75
+    b_colour = 'teal'
 
 class user():
-    dummy=0
+    username = 'alexg'

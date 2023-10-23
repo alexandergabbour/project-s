@@ -12,17 +12,17 @@
 #                                                                                                               \|_________|#
 #                                                             v0                                                            #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-                                                                                                                           
+#
+#                                                             GUI                                                                                
                                                                                                                            
 import customtkinter
 from functions import pyScripts
 from functions import bashScripts
-from const import *
+from config import *
 
 #appearance/theme setup - app modes: system, light, dark 
 customtkinter.set_appearance_mode('system')
 customtkinter.set_default_color_theme('blue')
-
 
 #layout of the interface
 class App(customtkinter.CTk):
@@ -48,23 +48,17 @@ class Menu(customtkinter.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
 
-        c_rad = 10
-        b_size = 60
-        b_colour = 'transparent'
+        self.grid_rowconfigure((0,1,2,3), weight=0)
+        self.grid_rowconfigure(4, weight=1)
 
-        self.grid_rowconfigure((0,1,2,3), weight=1)
+        self.home = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=config.b_colour, corner_radius=config.c_rad, height=config.b_size, width=config.b_size, text='Home')
+        self.home.grid(row=0, column=0, padx=10, pady=(10,0), sticky='new')
 
-        self.home = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=b_colour, corner_radius=c_rad, height=b_size, width=b_size, text='1')
-        self.home.grid(row=0, column=0, padx=10, pady=(0,10), sticky='ew')
+        self.favourites = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=config.b_colour, corner_radius=config.c_rad, height=config.b_size, width=config.b_size, text='Favourites')
+        self.favourites.grid(row=1, column=0, padx=10, pady=(10,0), sticky='new')
 
-        self.favourites = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=b_colour, corner_radius=c_rad, height=b_size, width=b_size, text='2')
-        self.favourites.grid(row=1, column=0, padx=10, pady=10, sticky='ew')
-
-        self.profile = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=b_colour, corner_radius=c_rad, height=b_size, width=b_size, text='3')
-        self.profile.grid(row=2, column=0, padx=10, pady=10, sticky='ew')
-
-        self.settings = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=b_colour, corner_radius=c_rad, height=b_size, width=b_size, text='4')
-        self.settings.grid(row=3, column=0, padx=10, pady=(10,0), sticky='ew')    
+        self.settings = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), fg_color=config.b_colour, corner_radius=config.c_rad, height=config.b_size, width=config.b_size, text='Settings')
+        self.settings.grid(row=4, column=0, padx=10, pady=(10,0), sticky='sew')  
 
 #shortcuts categories contents
 class SCCats(customtkinter.CTkFrame):
@@ -84,7 +78,6 @@ class SCCats(customtkinter.CTkFrame):
 
         self.category2 = Cat2(self)
         self.category2.grid(row=2, column=0, padx=10, pady=10, sticky='ew')
-
 
 #shortcuts to go into category 1
 class Cat1(customtkinter.CTkFrame):
@@ -114,6 +107,6 @@ class Cat2(customtkinter.CTkFrame):
         self.sc2 = customtkinter.CTkButton(self, font=(config.app_font, config.app_fontSize), height=config.sc_height, width=config.sc_width, text='linux init', command=bashScripts.init)
         self.sc2.grid(row=1, column=1, padx=20, pady=20)
 
-#run app
+#run interface
 app = App()
 app.mainloop()
