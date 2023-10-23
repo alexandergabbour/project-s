@@ -25,6 +25,10 @@ from database import *
 customtkinter.set_appearance_mode('system')
 customtkinter.set_default_color_theme('blue')
 
+#initialize config and core tables in 'database.db'
+init.config_init()
+init.core_init()
+
 #layout of the interface
 class App(customtkinter.CTk):
     def __init__(self):

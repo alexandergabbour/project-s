@@ -35,13 +35,14 @@ class init():
 		cur = connector.db.cursor()
 		cur.execute('CREATE TABLE core(sc_id,f_class,code)')
 
+#uncomment this block for debugging
 #init.config_init()
 #init.core_init()
 
-def test(sc_id,f_class,code):
+def scGen(sc_id,f_class,code):
 	cur = connector.db.cursor()
 	cmd = 'INSERT INTO core VALUES("{i}","{j}","{k}")'.format(i=sc_id,j=f_class,k=code)
 	cur.execute(cmd)
 	connector.db.commit()
 
-#test(1,'hello',"print('helloDB')")
+scGen(4,'hello',"print('helloDB')")
