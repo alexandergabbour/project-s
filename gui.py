@@ -16,9 +16,9 @@
 #                                                             GUI                                                                                
                                                                                                                            
 import customtkinter
-from functions import pyScripts
-from functions import bashScripts
+from functions import *
 from config import *
+from database import *
 
 #appearance/theme setup - app modes: system, light, dark 
 customtkinter.set_appearance_mode('system')

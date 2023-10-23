@@ -3,7 +3,10 @@ you've heard of the shortcuts app on apple devices. this will similarly bring to
 
 ## dependencies
 
-you will need to have the customtkinter library as well as the Ubuntu font installed in your virtual environment after cloning the repository to your machine.
+- customtkinter
+- sqlite3
+- subprocess
+- Ubuntu font (it's best lol)
 
 *this will eventually be included in a requirements .txt file for quicker dependancy installation
 
