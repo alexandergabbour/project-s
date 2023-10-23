@@ -10,41 +10,11 @@ class pyScripts():
     def print_goodbye():
         print('goodbye')
 
-    def add():
-        x=3
-        y=4
-        print(x+y)
-    
-    def subtract():
-        x=7
-        y=2
-        print(x-y)
-
 
 class bashScripts():
-
-    def script1(): #test function: bash stuff from user would go in the triple quotes below #! /bin/bash
-        hello = '''
-        #! /bin/bash
-        
-        echo 'hello world'
-        '''
-        subprocess.call(['bash', '-c', hello])
     
-    def linux_init():
+    def test():
+        subprocess.call("./bash/test-script.sh", shell=True)
 
-        #in this case 'init' stores the bash script. this could be stored in a seperate class and called by subprocess in the bashScripts class
-        init = '''
-        #! /bin/bash
-
-        echo 'initializing your linux machine...'
-
-        echo 'installing predefined software...'
-
-        sudo apt update && sudo apt upgrade
-
-        sudo snap install --classic code
-
-        sudo snap install spotify
-        '''
-        subprocess.call(['bash', '-c', init])
+    def init():
+        subprocess.call("./bash/linux-init.sh", shell=True)

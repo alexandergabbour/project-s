@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #ask user if they want to perform the update/upgrade process
 

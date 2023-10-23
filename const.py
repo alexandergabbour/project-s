@@ -14,9 +14,13 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #
 #                                                          CONSTANTS
+
 class config():
     sc_height = 75
     sc_width = 100
     app_font = 'Ubuntu'
     app_fontSize = 14
     dflt_windowSize = '600x500'
+
+class user():
+    dummy=0
